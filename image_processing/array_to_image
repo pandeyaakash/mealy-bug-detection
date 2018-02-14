@@ -1,0 +1,13 @@
+from PIL import Image
+import numpy as np
+
+
+img = Image.open('Platanus_orientalis_leaf.JPG').convert('RGBA')
+arr = np.array(img)
+
+# w, h = 512, 512
+# data = np.zeros((h, w, 3), dtype=np.uint8)
+# data[256, 256] = [255, 0, 0]
+img = Image.fromarray(arr, 'RGBA')
+img.save('my.png')
+img.show()
